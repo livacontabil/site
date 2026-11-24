@@ -375,7 +375,7 @@ footer .logo{color:var(--cream);font-size:22px}
   // Contatos — preencha o WhatsApp (só números, com DDI e DDD, ex.: 5511999999999) e o e-mail
   const WHATSAPP = '5511927974530';
   const WHATSAPP_LABEL = '(11) 92797-4530';
-  const EMAIL = '';
+  const EMAIL = 'contato@livacontabil.com';
   const INSTAGRAM = 'conta.liva';
 
   const plans = {
@@ -482,7 +482,7 @@ footer .logo{color:var(--cream);font-size:22px}
   const ch = [];
   if (WHATSAPP) ch.push(`<a href="https://wa.me/${WHATSAPP}"><span class="dot" style="background:#F4BD46">W</span><span>WhatsApp<br><small>${WHATSAPP_LABEL}</small></span></a>`);
   ch.push(`<a href="https://www.instagram.com/${INSTAGRAM}/"><span class="dot" style="background:#FF9AD1">@</span><span>Instagram<br><small>@${INSTAGRAM}</small></span></a>`);
-  if (EMAIL) ch.push(`<div><span class="dot" style="background:#4B3BE0;color:#fff">✉</span><span>E-mail<br><small>${esc(EMAIL)}</small></span></div>`);
+  if (EMAIL) ch.push(`<a href="mailto:${esc(EMAIL)}"><span class="dot" style="background:#4B3BE0;color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span>E-mail<br><small>${esc(EMAIL)}</small></span></a>`);
   document.getElementById('channels').innerHTML = ch.join('');
 
   const v = id => document.getElementById(id).value.trim();
