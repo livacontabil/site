@@ -397,12 +397,9 @@ footer .logo{color:var(--cream);font-size:22px}
       {name:'Comércio Negócio', who:'Loja física ou e-commerce já com volume', price:'750', color:'#F4BD46', hot:true, thirteen:true,
        crit:['R$ 30 a 80 mil/mês','Até 2 sócios','Até 2 funcionários'],
        items:['Tudo do Comércio Start','Folha de pagamento','Inventário de estoque no fechamento anual']},
-      {name:'Comércio Gestão', who:'Autopeças, materiais de construção, distribuidoras', price:'1.100', color:'#4B3BE0', thirteen:true,
-       crit:['R$ 80 a 150 mil/mês','Mais sócios e funcionários'],
-       items:['Tudo do Comércio Negócio','ICMS por substituição tributária (ST)','Vendas para outros estados e marketplaces','Reunião semestral de planejamento']},
-      {name:'Sob consulta', who:'Comércios acima de R$ 150 mil/mês, até o teto do Simples', custom:true, color:'#DB007D', thirteen:true,
-       crit:['Acima de R$ 150 mil/mês'],
-       items:['Proposta sob medida','Tudo do Comércio Gestão','Análise de regime tributário','Atendimento prioritário']}
+      {name:'Comércio Gestão', who:'Autopeças, materiais de construção, distribuidoras e comércios com mais volume', custom:true, color:'#4B3BE0', thirteen:true,
+       crit:['Acima de R$ 80 mil/mês','Mais sócios e funcionários'],
+       items:['Proposta sob medida para a sua operação','Tudo do Comércio Negócio','ICMS por substituição tributária (ST)','Vendas para outros estados e marketplaces','Análise de regime tributário','Reunião semestral de planejamento']}
     ],
     pf: [
       {name:'MEI', who:'Para microempreendedores individuais que querem tudo em dia sem dor de cabeça', price:'89', color:'#FF9AD1',
@@ -450,7 +447,7 @@ footer .logo{color:var(--cream);font-size:22px}
         ${p.hot?'<span class="tag">Mais escolhido</span>':''}
         <h3>${esc(p.name)}</h3>
         <p class="who">${esc(p.who)}</p>
-        ${p.custom?'<div class="price" style="white-space:normal"><b style="font-size:clamp(24px,2.6vw,30px);line-height:1.1">Proposta sob medida</b></div>':`<div class="price"><small>R$</small><b>${p.price}</b><small>/mês</small></div>`}
+        ${p.custom?'<div class="price" style="white-space:normal"><b style="font-size:clamp(28px,3vw,36px);line-height:1.1">Sob consulta</b></div>':`<div class="price"><small>R$</small><b>${p.price}</b><small>/mês</small></div>`}
         <p class="bill">${p.thirteen?'<span class="x13">13x</span> 12 mensalidades + 13ª em dezembro':'12 mensalidades por ano'}</p>
         <div class="crit"><span class="lbl">Para quem tem:</span><div class="chips">${p.crit.map(c=>`<span>${esc(c)}</span>`).join('')}</div></div>
         <p class="lbl">O que entregamos</p>
