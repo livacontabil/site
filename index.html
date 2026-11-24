@@ -373,7 +373,8 @@ footer .logo{color:var(--cream);font-size:22px}
 <script>
 {
   // Contatos — preencha o WhatsApp (só números, com DDI e DDD, ex.: 5511999999999) e o e-mail
-  const WHATSAPP = '';
+  const WHATSAPP = '5511927974530';
+  const WHATSAPP_LABEL = '(11) 92797-4530';
   const EMAIL = '';
   const INSTAGRAM = 'conta.liva';
 
@@ -479,7 +480,7 @@ footer .logo{color:var(--cream);font-size:22px}
   document.getElementById('faq-list').innerHTML = faq.map(([q,a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
 
   const ch = [];
-  if (WHATSAPP) ch.push(`<a href="https://wa.me/${WHATSAPP}"><span class="dot" style="background:#F4BD46">W</span><span>WhatsApp<br><small>+${WHATSAPP}</small></span></a>`);
+  if (WHATSAPP) ch.push(`<a href="https://wa.me/${WHATSAPP}"><span class="dot" style="background:#F4BD46">W</span><span>WhatsApp<br><small>${WHATSAPP_LABEL}</small></span></a>`);
   ch.push(`<a href="https://www.instagram.com/${INSTAGRAM}/"><span class="dot" style="background:#FF9AD1">@</span><span>Instagram<br><small>@${INSTAGRAM}</small></span></a>`);
   if (EMAIL) ch.push(`<div><span class="dot" style="background:#4B3BE0;color:#fff">✉</span><span>E-mail<br><small>${esc(EMAIL)}</small></span></div>`);
   document.getElementById('channels').innerHTML = ch.join('');
