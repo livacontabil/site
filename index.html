@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>livacontábil — planos</title>
+<title>liva contábil</title>
+<link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#090435">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -395,7 +399,7 @@ footer .logo{color:var(--cream);font-size:22px}
       {name:'Comércio Gestão', who:'Autopeças, materiais de construção, distribuidoras', price:'1.100', color:'#4B3BE0', thirteen:true,
        crit:['R$ 80 a 150 mil/mês','Mais sócios e funcionários'],
        items:['Tudo do Comércio Negócio','ICMS por substituição tributária (ST)','Vendas para outros estados e marketplaces','Reunião semestral de planejamento']},
-      {name:'Sob consulta', who:'Comércios acima de R$ 150 mil/mês, até o teto do Simples', price:'1.100', from:true, color:'#DB007D', thirteen:true,
+      {name:'Sob consulta', who:'Comércios acima de R$ 150 mil/mês, até o teto do Simples', custom:true, color:'#DB007D', thirteen:true,
        crit:['Acima de R$ 150 mil/mês'],
        items:['Proposta sob medida','Tudo do Comércio Gestão','Análise de regime tributário','Atendimento prioritário']}
     ],
@@ -445,7 +449,7 @@ footer .logo{color:var(--cream);font-size:22px}
         ${p.hot?'<span class="tag">Mais escolhido</span>':''}
         <h3>${esc(p.name)}</h3>
         <p class="who">${esc(p.who)}</p>
-        ${p.from?'<p class="bill" style="margin:0 0 -14px">a partir de</p>':''}<div class="price"><small>R$</small><b>${p.price}</b><small>/mês</small></div>
+        ${p.custom?'<div class="price" style="white-space:normal"><b style="font-size:clamp(24px,2.6vw,30px);line-height:1.1">Proposta sob medida</b></div>':`<div class="price"><small>R$</small><b>${p.price}</b><small>/mês</small></div>`}
         <p class="bill">${p.thirteen?'<span class="x13">13x</span> 12 mensalidades + 13ª em dezembro':'12 mensalidades por ano'}</p>
         <div class="crit"><span class="lbl">Para quem tem:</span><div class="chips">${p.crit.map(c=>`<span>${esc(c)}</span>`).join('')}</div></div>
         <p class="lbl">O que entregamos</p>
