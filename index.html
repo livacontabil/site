@@ -17,11 +17,11 @@
    PICTURE: a moeda oficial (disco mostarda com anelzinho azul-noite) gigante, cortada no canto do topo
    COLOUR and TYPE: azul-noite e creme predominam; magenta, mostarda, rosa e violeta só em detalhes; Poppins + Lora
    LAYOUT: topo azul sem faixas, passos, planos, dúvidas, contato */
-:root{color-scheme:light dark;
+:root{color-scheme:light;
   --navy:#090435;--cream:#FFF7E3;--magenta:#DB007D;--mustard:#F4BD46;--rose:#FF9AD1;--violet:#4B3BE0;
   --bg:light-dark(#FFF7E3,#090435);--ink:light-dark(#090435,#FFF7E3);--soft:light-dark(#4a4668,#c9c3dc);
   --card:light-dark(#fffdf8,#130d4a);--line:light-dark(#e3d9c8,#2a2366);--accent:light-dark(#DB007D,#F4BD46)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root[data-theme]{color-scheme:light}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Poppins,system-ui,sans-serif;overflow-x:clip}
@@ -145,8 +145,6 @@ nav ul a{text-decoration:none;opacity:.85;padding:10px 0;display:inline-block;wh
 .tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:5px;border-radius:999px;background:var(--card);border:1px solid var(--line);margin:28px 0 8px;max-width:640px}
 .tabs button{min-height:44px;padding:0 12px;white-space:nowrap;border-radius:999px;border:0;background:none;color:var(--ink);font:500 15px Poppins,sans-serif;cursor:pointer}
 .tabs button[aria-pressed=true]{background:var(--navy);color:var(--cream)}
-:root[data-theme=dark] .tabs button[aria-pressed=true]{background:var(--mustard);color:var(--navy)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .tabs button[aria-pressed=true]{background:var(--mustard);color:var(--navy)}}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
 .tabs .sm{display:none}
 .carnav{display:none;align-items:center;justify-content:center;gap:14px;margin-top:14px}
